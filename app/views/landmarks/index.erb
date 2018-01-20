@@ -1,0 +1,14 @@
+<h3>Landmarks:</h3>
+<table>
+  <% @landmarks.each do |landmark| %>
+    <tr>
+      <th>Name</th>
+      <th>Year Completed</th>
+    </tr>
+    <tr>
+      <td><a href="/landmarks/<%= landmark.id %>"><%= landmark.name %></a></td>
+      <td><%= landmark.year_completed %></td>
+    </tr>
+  <% end %>
+</table>
+<p><a href="/landmarks/new">Click here</a> to enter a new landmark.</p>
